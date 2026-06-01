@@ -176,8 +176,8 @@ function App() {
             src={profileImage}
             alt="Mira Nabil Alsakran"
             className="profile-image"
-            width="120"
-            height="120"
+            width="148"
+            height="148"
             loading="eager"
             decoding="async"
           />
