@@ -11,12 +11,14 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #07151f;
   color: white;
+  overflow-x: hidden;
 }
 
 .app {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .glow {
@@ -121,6 +123,8 @@ body {
 }
 
 .hero h1 span {
+  display: inline-block;
+  white-space: nowrap;
   background: linear-gradient(135deg, #9ed0da, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -286,6 +290,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.profile-details div:first-child {
+  display: none;
+}
+
 .profile-details svg {
   color: #9ed0da;
   min-width: 16px;
@@ -371,6 +379,7 @@ body {
 .timeline-card {
   position: relative;
   display: flex;
+  align-items: flex-start;
   gap: 22px;
   padding: 28px;
   border-radius: 26px;
@@ -386,8 +395,12 @@ body {
 }
 
 .timeline-dot {
+  width: 18px;
   min-width: 18px;
+  max-width: 18px;
   height: 18px;
+  flex: 0 0 18px;
+  align-self: flex-start;
   border-radius: 50%;
   background: linear-gradient(135deg, #4f8c97, #9ed0da);
   margin-top: 7px;
@@ -481,6 +494,11 @@ body {
   align-items: center;
 }
 
+.project-content h2 {
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
 .project-tags {
   display: flex;
   gap: 10px;
@@ -504,6 +522,7 @@ body {
   background: #f7fbfc;
   color: #07151f;
   padding: 22px;
+  overflow: hidden;
 }
 
 .app-title {
@@ -609,79 +628,14 @@ footer {
 }
 
 @media (max-width: 540px) {
-  .section {
-    padding: 28px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .phone {
-    width: 220px;
-    height: 430px;
-  }
-
-  .timeline-card {
-    flex-direction: column;
-  }
-
-  .category-header {
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
-  .profile-image {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* Final mobile fixes */
-.app {
-  overflow-x: hidden;
-  overflow-y: visible;
-}
-
-/* Fix timeline dot on mobile and desktop */
-.timeline-card {
-  align-items: flex-start;
-}
-
-.timeline-dot {
-  width: 18px;
-  min-width: 18px;
-  max-width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-  align-self: flex-start;
-}
-
-/* Hide Jordan / UAE line from profile card */
-.profile-details div:first-child {
-  display: none;
-}
-
-@media (max-width: 540px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .navbar {
     width: 92%;
     padding: 16px;
     border-radius: 22px;
+  }
+
+  .logo {
+    font-size: 26px;
   }
 
   .nav-links {
@@ -695,9 +649,37 @@ footer {
     gap: 35px;
   }
 
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hero h1 span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
   .hero-card {
     padding: 26px 20px;
     border-radius: 30px;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
   }
 
   .section {
@@ -718,7 +700,7 @@ footer {
   }
 
   .timeline-card {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 16px;
     padding: 24px 20px;
@@ -730,6 +712,7 @@ footer {
     max-width: 18px;
     height: 18px;
     flex: 0 0 18px;
+    margin-top: 9px;
     border-radius: 50%;
   }
 
@@ -748,10 +731,19 @@ footer {
     line-height: 1.75;
   }
 
+  .category-header {
+    align-items: flex-start;
+  }
+
   .project-section {
     grid-template-columns: 1fr;
     gap: 34px;
     overflow: visible;
+  }
+
+  .project-content h2 {
+    margin-top: 24px;
+    margin-bottom: 28px;
   }
 
   .phone {
@@ -806,5 +798,11 @@ footer {
 
   footer {
     padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: 32px;
   }
 }
