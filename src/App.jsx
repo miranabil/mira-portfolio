@@ -16,7 +16,7 @@ import "./App.css";
 
 function App() {
   const basePath = import.meta.env.BASE_URL;
-  const cvFile = `${basePath}mera_cv.pdf`;
+  const cvFile = `${basePath}mera_nabil_cv.pdf`;
   const profileImage = `${basePath}mira.webp`;
 
   const skillCategories = [
