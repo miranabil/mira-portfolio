@@ -10,13 +10,14 @@ import {
   FaUsers,
   FaFileDownload,
   FaMapMarkerAlt,
-  FaLaptopCode,
   FaBriefcase,
 } from "react-icons/fa";
 import "./App.css";
 
 function App() {
-  const cvFile = "/mera_cv.pdf";
+  const basePath = import.meta.env.BASE_URL;
+  const cvFile = `${basePath}mera_cv.pdf`;
+  const profileImage = `${basePath}mira.png`;
 
   const skillCategories = [
     {
@@ -172,7 +173,7 @@ function App() {
           <div className="card-glow"></div>
 
           <img
-            src="/mira.png"
+            src={profileImage}
             alt="Mira Nabil Alsakran"
             className="profile-image"
           />
@@ -192,11 +193,6 @@ function App() {
             <div>
               <FaMapMarkerAlt />
               <span>Jordan / UAE</span>
-            </div>
-
-            <div>
-              <FaLaptopCode />
-              <span>Web & Mobile Development</span>
             </div>
 
             <div>
