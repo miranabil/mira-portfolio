@@ -136,9 +136,9 @@ function App() {
       <section className="hero">
         <motion.div
           className="hero-text"
-          initial={{ opacity: 0, y: 40 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           <span className="badge">Software Engineering Graduate</span>
 
@@ -166,9 +166,9 @@ function App() {
 
         <motion.div
           className="hero-card"
-          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+          initial={false}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="card-glow"></div>
 
@@ -176,6 +176,10 @@ function App() {
             src={profileImage}
             alt="Mira Nabil Alsakran"
             className="profile-image"
+            width="120"
+            height="120"
+            loading="eager"
+            decoding="async"
           />
 
           <div className="card-name-block">
