@@ -22,6 +22,9 @@ function App() {
   const cvFile = `${basePath}mera_nabil_cv.pdf`;
   const profileImage = `${basePath}mira.webp`;
 
+  const figmaLink =
+    "https://www.figma.com/design/DcKhZlZFprPsbXpJiDNaV3/Untitled?node-id=0-1&t=UKNg08bFaZVUltv4-1";
+
   const yallaScreens = [
     {
       title: "Login Screen",
@@ -223,15 +226,6 @@ function App() {
               View My Project
             </a>
 
-            <a
-              href="https://www.figma.com/design/DcKhZlZFprPsbXpJiDNaV3/Untitled?node-id=0-1&t=UKNg08bFaZVUltv4-1"
-              target="_blank"
-              rel="noreferrer"
-              className="btn figma-btn"
-            >
-              <FaExternalLinkAlt /> View on Figma
-            </a>
-
             <a href={cvFile} download className="btn cv-btn">
               <FaFileDownload /> Download CV
             </a>
@@ -246,15 +240,15 @@ function App() {
         >
           <div className="card-glow"></div>
 
-          <img
-            src={profileImage}
-            alt="Mira Nabil Alsakran"
-            className="profile-image"
-            width="148"
-            height="148"
-            loading="eager"
-            decoding="async"
-          />
+          <div className="profile-image-frame">
+            <img
+              src={profileImage}
+              alt="Mira Nabil Alsakran"
+              className="profile-image"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
 
           <div className="card-name-block">
             <h3>Mira Nabil Alsakran</h3>
@@ -487,6 +481,15 @@ function App() {
           <div className="project-buttons">
             <a href="#yalla-case-study" className="btn primary">
               View Case Study
+            </a>
+
+            <a
+              href={figmaLink}
+              target="_blank"
+              rel="noreferrer"
+              className="btn figma-btn"
+            >
+              <FaExternalLinkAlt /> View on Figma
             </a>
 
             <a
