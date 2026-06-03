@@ -153,6 +153,16 @@ a {
   border: 1px solid rgba(158, 208, 218, 0.25);
 }
 
+.btn.figma-btn {
+  color: #eef7f9;
+  background: rgba(16, 37, 53, 0.9);
+}
+
+.btn.figma-btn:hover {
+  background: rgba(27, 59, 87, 0.95);
+  transform: translateY(-4px);
+}
+
 .btn.primary {
   background: #9ed0da;
   color: #0f2028;
@@ -176,9 +186,9 @@ a {
 
 .hero-card {
   position: relative;
-  padding: 34px;
+  padding: 22px 34px 34px;
   border-radius: 34px;
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(158, 208, 218, 0.18);
   text-align: center;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
@@ -187,8 +197,8 @@ a {
 
 .card-glow {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 190px;
+  height: 190px;
   background: rgba(158, 208, 218, 0.16);
   border-radius: 50%;
   filter: blur(40px);
@@ -197,8 +207,8 @@ a {
 }
 
 .profile-image {
-  width: 148px;
-  height: 148px;
+  width: 178px;
+  height: 178px;
   object-fit: cover;
   object-position: center top;
   border-radius: 50%;
@@ -206,8 +216,12 @@ a {
   background: #dce7ea;
   position: relative;
   z-index: 2;
+  margin-top: -14px;
 }
 
+.hero-card .card-name-block {
+  margin-top: 18px;
+}
 .card-name-block h3 {
   margin: 22px 0 8px;
   font-size: 25px;
@@ -633,25 +647,27 @@ a {
 
 .screens-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 28px;
   margin-top: 25px;
 }
 
 .screen-card {
   text-align: center;
-  padding: 18px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(158, 208, 218, 0.15);
+  padding: 22px;
+  border-radius: 42px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(158, 208, 218, 0.18);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.16);
 }
 
 .screen-card img {
   width: 100%;
-  height: 380px;
+  height: auto;
+  max-height: 460px;
   object-fit: contain;
-  border-radius: 18px;
-  background: #f8f8f8;
+  border-radius: 30px;
+  background: #0d2430;
 }
 
 .screen-card p {

@@ -13,6 +13,7 @@ import {
   FaBriefcase,
   FaTrophy,
   FaCalendarAlt,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import "./App.css";
 
@@ -24,32 +25,32 @@ function App() {
   const yallaScreens = [
     {
       title: "Login Screen",
-      image: `${basePath}images/yalla-rewards/login.jpg`,
+      image: `${basePath}images/yalla-rewards/login.jpeg`,
       alt: "Yalla Rewards login screen",
     },
     {
       title: "Register Screen",
-      image: `${basePath}images/yalla-rewards/register.jpg`,
+      image: `${basePath}images/yalla-rewards/register.jpeg`,
       alt: "Yalla Rewards register screen",
     },
     {
       title: "Home Screen",
-      image: `${basePath}images/yalla-rewards/home.jpg`,
+      image: `${basePath}images/yalla-rewards/home.jpeg`,
       alt: "Yalla Rewards home screen",
     },
     {
       title: "Shops Screen",
-      image: `${basePath}images/yalla-rewards/shops.jpg`,
+      image: `${basePath}images/yalla-rewards/shops.jpeg`,
       alt: "Yalla Rewards shops screen",
     },
     {
-      title: "Offers Screen",
-      image: `${basePath}images/yalla-rewards/offers.jpg`,
-      alt: "Yalla Rewards offers screen",
+      title: "Redeem Screen",
+      image: `${basePath}images/yalla-rewards/offers.jpeg`,
+      alt: "Yalla Rewards redeem screen",
     },
     {
       title: "Coupons Screen",
-      image: `${basePath}images/yalla-rewards/coupons.jpg`,
+      image: `${basePath}images/yalla-rewards/coupons.jpeg`,
       alt: "Yalla Rewards coupons screen",
     },
   ];
@@ -220,6 +221,15 @@ function App() {
           <div className="hero-buttons">
             <a href="#project" className="btn primary">
               View My Project
+            </a>
+
+            <a
+              href="https://www.figma.com/design/DcKhZlZFprPsbXpJiDNaV3/Untitled?node-id=0-1&t=UKNg08bFaZVUltv4-1"
+              target="_blank"
+              rel="noreferrer"
+              className="btn figma-btn"
+            >
+              <FaExternalLinkAlt /> View on Figma
             </a>
 
             <a href={cvFile} download className="btn cv-btn">
